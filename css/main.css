@@ -20,69 +20,33 @@
 
 .label {
     display: block;
-    display: flex;
-    align-items: center;
 }
 
-.input[type="checkbox"]:checked {
-    opacity: 0.5;
-}
-
-.span {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 10px;
-    background-image: url(../images/table-tennis.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 80%;
-    background-position: center;
-}
-
-.span1 {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 10px;
-    background-image: url(../images/basketball-ball.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    /* box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); */
-    background-size: 80%;
-    background-position: center;
-    opacity: 0.9;
-}
-
-.span1::checked :focus {
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-}
-
-.span2 {
-    display: inline-block;
-    width: 15px;
-    margin: 0 10px;
-    height: 15px;
-    background-image: url(../images/volleyball-ball.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 80%;
-    background-position: center;
-}
-
-.span3 {
-    display: inline-block;
-    width: 15px;
-    margin: 0 10px;
-    height: 15px;
-    background-image: url(../images/hockey-puck.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-size: 80%;
-    background-position: center;
+.checkbox {
+    display: none;
 }
 
 .spanjon {
-    color: #AFAFAF;
-    opacity: 0.9;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    position: relative;
+    /* border-radius: 50%; */
+}
+
+.spanjon::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/table-tennis.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: .2s;
 }
